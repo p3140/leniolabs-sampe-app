@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="lenioApp">
+  <head>
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- load angular and angular route via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <!-- APP -->
+    <script src="src/app.module.js"></script>
+    <script src="src/app.routes.js"></script>
+    <script src="src/app.controller.js"></script>
+    <!-- PAGES -->
+    <script src="src/controllers/home.controller.js"></script>
+    <script src="src/controllers/about.controller.js"></script>
+    <script src="src/controllers/contact.controller.js"></script>
+    <!-- DIRECTIVES -->
+    <script src="src/directives/input-is-valid/input-is-valid.directive.js"></script>
+  </head>
+  <body ng-controller="appController">
+    <!-- HEADER AND NAVBAR -->
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Leniolabs sample App</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+            <li><a href="#contact-us"><i class="fa fa-comment"></i> Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+      <div ng-view></div>
+    </div>
+  </body>
+</html>

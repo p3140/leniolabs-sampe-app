@@ -1,0 +1,42 @@
+<div class="jumbotron text-center">
+  <h1>Contact Us !</h1>
+  <p>Send us a message and we will reply a soon as possible.</p>
+</div>
+<!-- CONTACT FORM -->
+<div class="col-sm-8 col-sm-offset-2">
+  <!-- SUCCESS MESSAGE -->
+  <div ng-show="successMsg != ''" class="alert alert-success" role="alert">
+    {{successMsg}}
+  </div>
+  <!-- FORM -->
+  <!-- pass in the variable if our form is valid or invalid -->
+  <form name="contactForm" ng-submit="submitForm(contactForm.$valid)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+    <!-- NAME -->
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" name="name" class="form-control"
+        ng-model="contact.name" required>
+      <span input-is-valid input="contactForm.name"></span>
+    </div>
+    <!-- EMAIL -->
+    <div class="form-group">
+      <label>E-mail</label>
+      <input type="email" name="email" class="form-control"
+        ng-model="contact.email" required>
+      <span input-is-valid input="contactForm.email"></span>
+    </div>
+    <!-- MESSAGE -->
+    <div class="form-group">
+      <label>Message</label>
+      <textarea name="message" rows="8" cols="80" class="form-control"
+        ng-model="contact.message" ng-minlength="2" ng-maxlength="500" required></textarea>
+      <span input-is-valid input="contactForm.message"></span>
+    </div>
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" class="btn btn-primary" ng-show="!sendingMsg"
+      ng-disabled="contactForm.$invalid">
+        Submit
+    </button>
+    <img src="assets/img/ajax-loader.gif" ng-show="sendingMsg">
+  </form>
+</div><!-- col-sm-8 -->

@@ -1,0 +1,61 @@
+/** Global Site Fonts **/
+@font-face {
+	font-family: 'caviar_dreamsregular';
+	src: url(../fonts/CaviarDreams-webfont.ttf) format('truetype');
+}
+body {
+	color: #193849;
+}
+body,h1,h2,h3,h4 {
+  font-family: 'caviar_dreamsregular';
+}
+h1, h2, h3, h4 {
+  text-shadow: 2px 2px 6px #46cdcf;
+}
+
+/** Form **/
+form {
+	margin-bottom: 100px;
+}
+input[type='text'] {
+	padding: 3px;
+	max-height: 30px;
+	font-size: 16px;
+}
+button[type='submit'] {
+	padding: 3px;
+	max-height: 30px;
+	width: 95%;
+	font-size: 16px;
+}
+
+.alert {
+		margin: 3px;
+		max-width: 95%;
+}
+
+input, textarea {
+	margin: 3px;
+	max-width: 95%;
+	display: inline-block !important;
+}
+
+form label {
+	width: 100%;
+}
+form i {
+	float: right;
+	max-width: 5%;
+	margin-top: 10px;
+}
+
+.form-group {
+	display: inline-block;
+	width: 100%;
+}
+
+/** jumbotron **/
+.jumbotron {
+	background-color: #193849;
+	color: #ffffff;
+}
